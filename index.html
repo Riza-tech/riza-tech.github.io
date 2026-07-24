@@ -29,7 +29,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 font-extrabold text-2xl tracking-tight text-primary flex items-center gap-2">
-                    <i class="fa-solid fa-microchip"></i> Riza Zaki.
+                    <i class="fa-solid fa-microchip"></i> Riza Zaki A.
                 </div>
                 <div class="hidden md:flex space-x-8 font-medium">
                     <a href="#beranda" class="text-slate-600 hover:text-primary transition-colors">Beranda</a>
@@ -42,29 +42,52 @@
         </div>
     </nav>
 
-    <section id="beranda" class="pt-32 pb-20 md:pt-48 md:pb-32 bg-gradient-to-b from-white to-light">
+    <!-- ... existing code ... -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <!-- ... navigation menu ... -->
+    </nav>
+
+    <section id="beranda" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-white to-light overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto">
-                <div class="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-primary font-semibold text-sm mb-6 border border-blue-100 shadow-sm">
-                    Mechatronics Engineering Student @ PENS
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-8">
+                
+                <!-- BAGIAN KIRI: Teks Perkenalan -->
+                <div class="flex-1 text-center lg:text-left z-10">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-emerald-50 text-emerald-700 font-semibold text-sm mb-6 border border-emerald-100 shadow-sm">
+                        <i class="fa-solid fa-microchip mr-1"></i> Industrial Automation Enthusiast
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark mb-6 tracking-tight leading-tight">
+                        Riza Zaki Affifuddin
+                    </h1>
+                    <p class="text-xl md:text-2xl text-secondary mb-6 font-medium">
+                        PLC Programmer & System Integrator
+                    </p>
+                    <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Fokus membangun sistem otomasi industri yang efisien, handal, dan siap produksi. Memiliki spesialisasi dalam pemrograman PLC, desain HMI, dan integrasi sistem elektro-pneumatik.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a href="#portfolio" class="bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-emerald-700 hover:-translate-y-1 transition-all shadow-lg hover:shadow-emerald-500/30 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-gears"></i> Lihat Proyek
+                        </a>
+                        <a href="#kontak" class="bg-white border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-xl font-semibold hover:border-emerald-600 hover:text-emerald-700 transition-all flex items-center justify-center gap-2">
+                            <i class="fa-regular fa-envelope"></i> Hubungi Saya
+                        </a>
+                    </div>
                 </div>
-                <h1 class="text-4xl md:text-6xl font-extrabold text-dark mb-6 tracking-tight leading-tight">
-                    Riza Zaki Affifuddin
-                </h1>
-                <p class="text-xl md:text-2xl text-secondary mb-8 font-medium">
-                    Mechanical Researcher | UAV/Drone Developer | Automation Enthusiast
-                </p>
-                <p class="text-lg text-slate-600 mb-10 leading-relaxed">
-                    Saya menjembatani konsep engineering yang kompleks menjadi sistem otomatis yang siap produksi. Berpengalaman dalam Riset & Pengembangan UAV, Desain Mekanik 3D tingkat lanjut, serta Otomasi Industri menggunakan PLC & HMI.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#portfolio" class="bg-primary text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-800 hover:-translate-y-1 transition-all shadow-lg hover:shadow-blue-500/30 flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-rocket"></i> Lihat Proyek
-                    </a>
-                    <a href="#kontak" class="bg-white border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-xl font-semibold hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-2">
-                        <i class="fa-regular fa-envelope"></i> Hubungi Saya
-                    </a>
+
+                <!-- BAGIAN KANAN: Foto Profil -->
+                <div class="flex-1 flex justify-center lg:justify-end z-10 mb-8 lg:mb-0">
+                    <div class="relative w-56 h-56 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px]">
+                        <!-- Efek cahaya hijau di belakang foto -->
+                        <div class="absolute inset-0 bg-emerald-300 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+                        
+                        <!-- GANTI LINK FOTO DI SINI -->
+                        <img src="images/pp.png" 
+                             alt="Riza Zaki Affifuddin" 
+                             class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl hover:scale-[1.02] transition-transform duration-500">
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -81,46 +104,46 @@
             <div class="grid lg:grid-cols-2 gap-16 items-start">
                 <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
                     <p>
-                        Sebagai mahasiswa Teknik Mekatronika di PENS (EEPIS), saya memiliki rekam jejak yang terbukti dalam perancangan desain teknis yang solid dan implementasi kontrol otomatis. 
+                        Sebagai mahasiswa Teknik Mekatronika di PENS, orientasi karir saya terfokus untuk menjadi seorang <strong class="text-dark">Automation Engineer</strong>. Saya memiliki passion yang besar dalam merancang logika kontrol sistem untuk meminimalisir intervensi manusia dan meningkatkan efisiensi manufaktur.
                     </p>
                     <p>
-                        Keunggulan teknis saya telah divalidasi melalui penghargaan internasional, termasuk <strong class="text-dark">2nd Place & Judge's Commendation Award di SAFMC Singapura (2025 & 2026)</strong> untuk inovasi mekanisme drone yang highly-creative dan efisien bersama CAKSA Team.
+                        Spesialisasi saya dalam <strong class="text-dark">Otomasi Industri</strong> telah dibuktikan melalui berbagai kompetisi tingkat nasional, di mana saya memenangkan kejuaraan pemrograman PLC & HMI (Omron di POLINEMA & Schneider Electric di ATMI Surakarta). Pemahaman saya mengenai standar komponen industri (seperti sistem elektro-pneumatik) juga sangat terasah melalui pengalaman saya di <strong class="text-dark">Divisi Didactic, Festo Indonesia</strong>.
                     </p>
                     <p>
-                        Di samping kedirgantaraan, fondasi saya di Otomasi Industri juga sangat kuat. Saya memenangkan kompetisi pemrograman PLC & HMI tingkat nasional (Omron & Schneider Electric), serta pernah berkontribusi sebagai asisten teknis di Divisi Didactic, Festo Indonesia. Saya terbiasa bekerja di bawah tekanan, mulai dari lingkungan <i class="italic">pitstop</i> perlombaan yang serba cepat hingga R&D industri.
+                        Sebagai nilai tambah yang memperkuat kemampuan problem-solving perangkat keras saya di bawah tekanan, saya memiliki rekam jejak di R&D UAV/Drone dan desain mekanik tingkat lanjut (Meraih Juara 2 & Judge's Commendation di SAFMC Singapura). Pemahaman dua sisi logic control dan mechanical integrity membuat saya mampu mengeksekusi sistem integrasi secara holistik.
                     </p>
                 </div>
                 
                 <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
                     <h3 class="text-2xl font-bold mb-6 text-dark flex items-center gap-2">
-                        <i class="fa-solid fa-wrench text-primary"></i> Keahlian Teknis
+                        <i class="fa-solid fa-gear text-primary"></i> Keahlian Teknis
                     </h3>
                     <div class="space-y-6">
                         <div>
-                            <span class="font-bold text-secondary block mb-3">3D Modeling & Mechanical Design (DFM)</span>
+                            <span class="font-bold text-secondary block mb-3">Industrial Automation & Control (Main Focus)</span>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-4 py-1.5 bg-sky-100 text-sky-800 rounded-lg text-sm font-semibold">Autodesk Inventor</span>
-                                <span class="px-4 py-1.5 bg-sky-100 text-sky-800 rounded-lg text-sm font-semibold">Fusion 360</span>
-                                <span class="px-4 py-1.5 bg-sky-100 text-sky-800 rounded-lg text-sm font-semibold">3D Printing (FDM/SLS)</span>
-                                <span class="px-4 py-1.5 bg-sky-100 text-sky-800 rounded-lg text-sm font-semibold">CNC Machining</span>
-                            </div>
-                        </div>
-                        <div>
-                            <span class="font-bold text-secondary block mb-3">Industrial Automation & IoT</span>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg text-sm font-semibold">PLC (Omron, Schneider)</span>
+                                <span class="px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg text-sm font-semibold">PLC (Omron, Schneider, Mitsubishi, Siemens)</span>
                                 <span class="px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg text-sm font-semibold">HMI Design</span>
                                 <span class="px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg text-sm font-semibold">Ladder Logic</span>
                                 <span class="px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg text-sm font-semibold">Electro-Pneumatics (Festo)</span>
-                                <span class="px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg text-sm font-semibold">IoT Device Engineering</span>
+                                <span class="px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg text-sm font-semibold">Web Control</span>
                             </div>
                         </div>
                         <div>
-                            <span class="font-bold text-secondary block mb-3">Robotics</span>
+                            <span class="font-bold text-secondary block mb-3">Internet of Things (IoT) & Electronics</span>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-4 py-1.5 bg-indigo-100 text-indigo-800 rounded-lg text-sm font-semibold">UAV System Integration</span>
-                                <span class="px-4 py-1.5 bg-indigo-100 text-indigo-800 rounded-lg text-sm font-semibold">Hardware Troubleshooting</span>
-                                <span class="px-4 py-1.5 bg-indigo-100 text-indigo-800 rounded-lg text-sm font-semibold">Rapid Prototyping</span>
+                                <span class="px-4 py-1.5 bg-sky-100 text-sky-800 rounded-lg text-sm font-semibold">Microcontrollers (ESP32, Arduino)</span>
+                                <span class="px-4 py-1.5 bg-sky-100 text-sky-800 rounded-lg text-sm font-semibold">Sensor Integration</span>
+                                <span class="px-4 py-1.5 bg-sky-100 text-sky-800 rounded-lg text-sm font-semibold">Hardware Troubleshooting</span>
+                                <span class="px-4 py-1.5 bg-sky-100 text-sky-800 rounded-lg text-sm font-semibold">Electrical Wiring</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="font-bold text-secondary block mb-3">Mechanical Design & 3D (Secondary)</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-1.5 bg-slate-200 text-slate-800 rounded-lg text-sm font-semibold">Autodesk Inventor / Fusion 360</span>
+                                <span class="px-4 py-1.5 bg-slate-200 text-slate-800 rounded-lg text-sm font-semibold">DFM & 3D Printing</span>
+                                <span class="px-4 py-1.5 bg-slate-200 text-slate-800 rounded-lg text-sm font-semibold">UAV Mechanisms</span>
                             </div>
                         </div>
                     </div>
@@ -132,63 +155,82 @@
     <section id="portfolio" class="py-24 bg-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 max-w-2xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Showcase Proyek</h2>
-                <p class="text-lg text-slate-600">Implementasi nyata integrasi sistem elektronik, perancangan mekanik, dan software kontrol.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Portofolio</h2>
+                <p class="text-lg text-slate-600">Implementasi nyata kontrol industri, pemrograman logika otomatis, dan sistem integrasi mandiri.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Project 1: SAFMC UAV -->
+                <!-- Project 1: PLC Sorting System -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
                     <div class="overflow-hidden h-56 relative">
-                        <img src="https://placehold.co/600x400/1d4ed8/ffffff?text=UAV+Drone+Platform" alt="CAKSA UAV" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-4 right-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full shadow">🏆 2nd Place SAFMC</div>
+                        <img src="images/water_main.jpg" alt="PLC Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full shadow">🏆 2nd Place National</div>
                     </div>
                     <div class="p-8 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-dark mb-3 leading-tight">UAV Platform & Modular Arm System</h3>
+                        <h3 class="text-2xl font-bold text-dark mb-3 leading-tight">Water Filing + Pick and Place Controlled using Web Browser</h3>
                         <p class="text-slate-600 mb-6 flex-grow">
-                            Merancang dari nol platform drone kompetisi dengan lengan mekanis modular dan gripper khusus muatan. Memenangkan Judge's Commendation Award untuk "mekanisme yang sangat kreatif dan efisien".
+                            Merancang algoritma Ladder Logic (PLC Siemens) dan sistem kontrol berbasis web untuk mengisi air kedalam wadah di konveyor lalu menutup wadah secara otomatis berdasarkan umpan balik sensor.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-bold">Autodesk Inventor</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-bold">DFM</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-bold">UAV</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-bold">PLC</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-bold">Web Control</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-bold">Ladder Logic</span>
+                            <span class="px-4 py-1.5 bg-sky-100 text-sky-800 rounded-lg text-sm font-semibold">Electrical Wiring</span>
+                        </div>
+                        <!-- Tombol Pemicu Modal Detail -->
+                        <div class="mt-auto pt-4 border-t border-slate-100">
+                            <button onclick="openProject('plc')" class="w-full py-3 rounded-lg bg-slate-50 hover:bg-primary hover:text-white text-primary font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer">
+                                Lihat Detail Proyek <i class="fa-solid fa-arrow-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2: PLC Sorting System -->
+                <!-- Project 2: Bottle Filling (New Automation Project) -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
                     <div class="overflow-hidden h-56 relative">
-                        <img src="https://placehold.co/600x400/0f172a/ffffff?text=PLC+Conveyor+System" alt="PLC Sorting System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="https://placehold.co/600x400/0284c7/ffffff?text=Automated+Bottle+Filling" alt="Bottle Filling System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-8 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-dark mb-3 leading-tight">Industrial Sorting Conveyor Control</h3>
+                        <h3 class="text-2xl font-bold text-dark mb-3 leading-tight">Automated Bottle Filling & Capping</h3>
                         <p class="text-slate-600 mb-6 flex-grow">
-                            Implementasi pemrograman Ladder Logic (Omron & Schneider PLC) dan pengembangan HMI untuk sistem konveyor fisik berbasis sensor. Proyek ini memenangkan Juara 2 tingkat Nasional.
+                            Pembuatan prototipe sistem pengisian cairan presisi tinggi. Terintegrasi dengan proximity sensor, load cell untuk menimbang volume cairan, dan aktuator solenoid valve.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-bold">PLC Ladder Logic</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-bold">HMI</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-bold">Automation</span>
+                            <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-md text-xs font-bold">Automation</span>
+                            <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-md text-xs font-bold">Sensors</span>
+                            <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-md text-xs font-bold">Actuators</span>
+                        </div>
+                        <!-- Tombol Pemicu Modal Detail -->
+                        <div class="mt-auto pt-4 border-t border-slate-100">
+                            <button onclick="openProject('bottle')" class="w-full py-3 rounded-lg bg-slate-50 hover:bg-primary hover:text-white text-primary font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer">
+                                Lihat Detail Proyek <i class="fa-solid fa-arrow-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3: 3D Parts Design -->
+                <!-- Project 3: SAFMC UAV (Sweetener) -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
                     <div class="overflow-hidden h-56 relative">
-                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Precision+CAD+Models" alt="Freelance CAD" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="https://placehold.co/600x400/334155/ffffff?text=UAV+Mechanisms" alt="CAKSA UAV" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full shadow">🏆 SAFMC Award</div>
                     </div>
                     <div class="p-8 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-dark mb-3 leading-tight">Precision Mechanical Components</h3>
+                        <h3 class="text-2xl font-bold text-dark mb-3 leading-tight">UAV Mechanism & Integration</h3>
                         <p class="text-slate-600 mb-6 flex-grow">
-                            Pengembangan komponen mekanik presisi tinggi (frame, motor mount) untuk klien internasional di Upwork. Melakukan simulasi perakitan digital (Digital Twin) dan optimasi struktural untuk 3D Printing.
+                            <i class="text-sm">(Proyek Pelengkap)</i> Pengembangan mekanik UAV dan gripper otonom. Melatih kepekaan integrasi mekanik-elektrik dan hardware troubleshooting.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-bold">Fusion 360</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-bold">3D Printing (SLS)</span>
-                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-bold">CAD</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-bold">Mechanical Design</span>
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-bold">Hardware Integ.</span>
+                        </div>
+                        <!-- Tombol Pemicu Modal Detail -->
+                        <div class="mt-auto pt-4 border-t border-slate-100">
+                            <button onclick="openProject('uav')" class="w-full py-3 rounded-lg bg-slate-50 hover:bg-primary hover:text-white text-primary font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer">
+                                Lihat Detail Proyek <i class="fa-solid fa-arrow-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -200,70 +242,69 @@
     <section id="pengalaman" class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center gap-4 mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-dark">Pengalaman Profesional</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">Pengalaman Profesional & Kompetisi</h2>
                 <div class="h-1 flex-grow bg-slate-100 rounded-full">
                     <div class="h-1 w-24 bg-primary rounded-full"></div>
                 </div>
             </div>
             
-            <div class="relative border-l-4 border-slate-100 space-y-12 ml-4 md:ml-0">
+            <div class="relative border-l-4 border-slate-200 space-y-12 ml-4 md:ml-0">
                 
-                <!-- Exp 1 -->
+                <!-- Exp 1: PLC Competition -->
                 <div class="relative pl-8 md:pl-10">
-                    <div class="absolute w-5 h-5 bg-primary rounded-full -left-[14px] top-1.5 border-4 border-white shadow"></div>
+                    <div class="absolute w-5 h-5 bg-emerald-500 rounded-full -left-[14px] top-1.5 border-4 border-white shadow"></div>
                     <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                        <h3 class="font-bold text-2xl text-dark">Mechanical Design Engineer</h3>
-                        <span class="text-primary font-bold bg-blue-50 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 w-fit">Apr 2026 - Sekarang</span>
+                        <h3 class="font-bold text-2xl text-dark">PLC & HMI Programmer (Competitor)</h3>
+                        <span class="text-emerald-700 font-bold bg-emerald-50 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 w-fit">2025</span>
                     </div>
-                    <div class="text-lg font-medium text-slate-700 mb-4 flex items-center gap-2"><i class="fa-solid fa-globe text-slate-400"></i> Upwork (Surabaya)</div>
-                    <ul class="list-disc ml-5 text-slate-600 space-y-2 leading-relaxed">
-                        <li>Merancang komponen drone presisi tinggi (frame, dudukan motor, sensor) untuk klien internasional.</li>
-                        <li>Mengembangkan <i class="italic">1:1 digital twins</i> komponen elektronik untuk pemeriksaan interferensi perakitan.</li>
-                        <li>Mengoptimalkan komponen untuk 3D printing (FDM/SLS) demi memastikan efisiensi rasio berat terhadap kekuatan.</li>
+                    <div class="text-lg font-medium text-slate-700 mb-4 flex items-center gap-2"><i class="fa-solid fa-trophy text-slate-400"></i> Kejuaraan Nasional (Polinema & ATMI Surakarta)</div>
+                    <ul class="list-disc ml-5 text-slate-600 space-y-2 leading-relaxed mb-4">
+                        <li>Memenangkan <strong>Juara 2</strong> pada kompetisi PLC dan HMI tingkat nasional.</li>
+                        <li>Merancang program logika presisi menggunakan PLC Omron & Schneider Electric.</li>
+                        <li>Mengintegrasikan perangkat keras konveyor dengan antarmuka layar HMI secara real-time.</li>
                     </ul>
+                    <!-- Tombol Galeri PLC -->
+                    <button onclick="openGallery('plc_comp')" class="px-5 py-2 bg-emerald-50 hover:bg-emerald-600 text-emerald-700 hover:text-white rounded-lg text-sm font-bold transition-colors duration-300 flex items-center gap-2 border border-emerald-200 shadow-sm cursor-pointer w-full sm:w-auto justify-center">
+                        <i class="fa-solid fa-image"></i> Lihat Sertifikat & Bukti
+                    </button>
                 </div>
 
-                <!-- Exp 2 -->
+                <!-- Exp 2: Festo -->
                 <div class="relative pl-8 md:pl-10">
-                    <div class="absolute w-5 h-5 bg-primary rounded-full -left-[14px] top-1.5 border-4 border-white shadow"></div>
+                    <div class="absolute w-5 h-5 bg-emerald-500 rounded-full -left-[14px] top-1.5 border-4 border-white shadow"></div>
                     <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                        <h3 class="font-bold text-2xl text-dark">Mechanical R&D (UAV Division)</h3>
-                        <span class="text-primary font-bold bg-blue-50 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 w-fit">Okt 2024 - Sekarang</span>
-                    </div>
-                    <div class="text-lg font-medium text-slate-700 mb-4 flex items-center gap-2"><i class="fa-solid fa-users text-slate-400"></i> CAKSA TEAM (Surabaya)</div>
-                    <ul class="list-disc ml-5 text-slate-600 space-y-2 leading-relaxed">
-                        <li>Bertanggung jawab atas desain mekanik end-to-end dan integritas struktural platform drone kustom.</li>
-                        <li>Berkolaborasi erat dengan divisi elektronik dan pemrograman untuk memastikan integrasi software-hardware pada misi terbang otonom.</li>
-                    </ul>
-                </div>
-
-                <!-- Exp 3 -->
-                <div class="relative pl-8 md:pl-10">
-                    <div class="absolute w-5 h-5 bg-primary rounded-full -left-[14px] top-1.5 border-4 border-white shadow"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                        <h3 class="font-bold text-2xl text-dark">Mechanical & Pit Crew</h3>
-                        <span class="text-primary font-bold bg-blue-50 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 w-fit">Mar 2025 - Mar 2026</span>
-                    </div>
-                    <div class="text-lg font-medium text-slate-700 mb-4 flex items-center gap-2"><i class="fa-solid fa-plane text-slate-400"></i> SAFMC (Singapore)</div>
-                    <ul class="list-disc ml-5 text-slate-600 space-y-2 leading-relaxed">
-                        <li>Bertindak sebagai mekanik utama di zona <i class="italic">pitstop</i> tekanan tinggi, menjamin 100% reliabilitas fisik dan perbaikan cepat (troubleshooting) antar misi.</li>
-                        <li>Memastikan standar fabrikasi keamanan operasional mematuhi pedoman dari Kementerian Pertahanan Singapura (MINDEF).</li>
-                    </ul>
-                </div>
-
-                <!-- Exp 4 -->
-                <div class="relative pl-8 md:pl-10">
-                    <div class="absolute w-5 h-5 bg-primary rounded-full -left-[14px] top-1.5 border-4 border-white shadow"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                        <h3 class="font-bold text-2xl text-dark">Technical Assistant - Didactic</h3>
-                        <span class="text-primary font-bold bg-blue-50 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 w-fit">Des 2023 - Apr 2024</span>
+                        <h3 class="font-bold text-2xl text-dark">Technical Assistant - Didactic Division</h3>
+                        <span class="text-emerald-700 font-bold bg-emerald-50 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 w-fit">Des 2023 - Apr 2024</span>
                     </div>
                     <div class="text-lg font-medium text-slate-700 mb-4 flex items-center gap-2"><i class="fa-solid fa-industry text-slate-400"></i> Festo Indonesia (Tangerang)</div>
-                    <ul class="list-disc ml-5 text-slate-600 space-y-2 leading-relaxed">
-                        <li>Mendukung tim pelatih dalam membawakan materi otomasi industri untuk klien korporat dan pameran industri (EXPO).</li>
-                        <li>Mengelola logistik dan kesiapan modul training, termasuk PLC, Electro-pneumatics, dan sistem pembelajaran mekatronika.</li>
+                    <ul class="list-disc ml-5 text-slate-600 space-y-2 leading-relaxed mb-4">
+                        <li>Mendukung tim trainer menyajikan materi otomasi industri (PLC, pneumatik, elektro-pneumatik) untuk klien korporat.</li>
+                        <li>Mengelola operasional dan memecahkan masalah teknis (troubleshooting) perangkat training kit standar industri.</li>
                     </ul>
+                    <!-- Tombol Galeri Festo -->
+                    <button onclick="openGallery('festo')" class="px-5 py-2 bg-emerald-50 hover:bg-emerald-600 text-emerald-700 hover:text-white rounded-lg text-sm font-bold transition-colors duration-300 flex items-center gap-2 border border-emerald-200 shadow-sm cursor-pointer w-full sm:w-auto justify-center">
+                        <i class="fa-solid fa-image"></i> Lihat Foto Aktivitas Festo
+                    </button>
                 </div>
+
+                <!-- Exp 3: SAFMC/UAV -->
+                <div class="relative pl-8 md:pl-10 opacity-90 hover:opacity-100 transition-opacity">
+                    <div class="absolute w-5 h-5 bg-slate-400 rounded-full -left-[14px] top-1.5 border-4 border-white shadow"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+                        <h3 class="font-bold text-2xl text-dark">Mechanical R&D & Pit Crew <span class="text-sm font-normal text-slate-500 ml-2">(Pengalaman Pelengkap)</span></h3>
+                        <span class="text-slate-600 font-bold bg-slate-100 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 w-fit">2024 - Sekarang</span>
+                    </div>
+                    <div class="text-lg font-medium text-slate-700 mb-4 flex items-center gap-2"><i class="fa-solid fa-plane text-slate-400"></i> CAKSA Team / SAFMC (Singapore)</div>
+                    <ul class="list-disc ml-5 text-slate-600 space-y-2 leading-relaxed mb-4">
+                        <li>Meraih "Judge's Commendation Award" (2026) atas inovasi mekanisme yang efisien, dan Juara 2 (2025).</li>
+                        <li>Mengeksekusi perbaikan cepat antar-sesi penerbangan drone di bawah tekanan perlombaan internasional.</li>
+                    </ul>
+                    <!-- Tombol Galeri SAFMC -->
+                    <button onclick="openGallery('safmc')" class="px-5 py-2 bg-slate-100 hover:bg-slate-700 text-slate-700 hover:text-white rounded-lg text-sm font-bold transition-colors duration-300 flex items-center gap-2 border border-slate-200 shadow-sm cursor-pointer w-full sm:w-auto justify-center">
+                        <i class="fa-solid fa-image"></i> Lihat Medali & Penghargaan SAFMC
+                    </button>
+                </div>
+
 
             </div>
             
@@ -308,6 +349,266 @@
             </div>
         </div>
     </section>
+<!-- MODAL: Halaman Detail Proyek Virtual -->
+    <div id="projectModal" class="fixed inset-0 z-[100] bg-light hidden overflow-y-auto opacity-0 transition-opacity duration-300">
+        <button onclick="closeProject()" class="fixed top-4 right-4 md:top-8 md:right-8 z-[110] bg-white text-slate-800 hover:text-red-500 hover:bg-red-50 w-12 h-12 flex items-center justify-center rounded-full shadow-lg border border-slate-200 transition-all cursor-pointer">
+            <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <!-- INI BAGIAN YANG KURANG: Tag Video -->
+            <video id="pm-video" class="w-full h-64 md:h-[400px] object-cover rounded-2xl shadow-md mb-8 border border-slate-200 hidden" controls loop muted playsinline></video>
+            
+            <img id="pm-img" src="" class="w-full h-64 md:h-[400px] object-cover rounded-2xl shadow-md mb-8 border border-slate-200" alt="Project Detail">
+            <h2 id="pm-title" class="text-3xl md:text-5xl font-extrabold text-dark mb-4 tracking-tight"></h2>
+            <p id="pm-subtitle" class="text-xl text-primary font-semibold mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-microchip"></i> <span></span>
+            </p>
+            
+            <div id="pm-tags" class="flex flex-wrap gap-2 mb-10 pb-10 border-b border-slate-200">
+                <!-- tags di-inject oleh JS -->
+            </div>
+            
+            <div id="pm-desc" class="prose prose-lg text-slate-600 max-w-none space-y-6">
+                <!-- Deskripsi HTML di-inject oleh JS -->
+            </div>
+        </div>
+    </div>
 
+    <!-- MODAL: Galeri Sertifikat & Bukti (Popup Lightbox) -->
+    <div id="galleryModal" class="fixed inset-0 z-[100] bg-slate-900/95 backdrop-blur-sm hidden flex-col items-center justify-center p-4 md:p-8 opacity-0 transition-opacity duration-300">
+        <button onclick="closeGallery()" class="absolute top-4 right-4 md:top-8 md:right-8 text-slate-300 hover:text-white p-2 transition-colors cursor-pointer z-10">
+            <i class="fa-solid fa-xmark text-4xl"></i>
+        </button>
+        
+        <div class="w-full max-w-6xl mt-12 md:mt-0 relative z-0">
+            <h3 id="gm-title" class="text-white text-2xl md:text-3xl font-bold mb-8 text-center border-b border-slate-700 pb-4"></h3>
+            <!-- Grid Foto -->
+            <div id="gm-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-h-[75vh] overflow-y-auto p-2 scrollbar-hide">
+                <!-- image di-inject oleh JS -->
+            </div>
+            <p class="text-slate-400 text-center mt-6 text-sm">*Klik di luar area foto atau tombol silang untuk menutup galeri.</p>
+        </div>
+    </div>
+
+    <script>
+        // DATA DETAIL PROYEK (Nanti edit link foto dan teks deskripsinya di sini)
+        const projectData = {
+            plc: {
+                title: "Water Filing + Pick and Place Controlled using Web Browser",
+                subtitle: "Penerapan Algoritma Logic Real-Time & WebUX",
+                video: "videos/water_main.mp4",
+                img: "images/water_main.jpg",
+                tags: ["PLC Siemens S7-1200", "Festo MPS", "WinCC WebUX", "Ladder Logic", "TIA Portal V16"],
+                desc: `
+                    <h4 class="font-bold text-2xl text-dark">Latar Belakang & Tujuan Proyek</h4>
+                    <p>Proyek ini merupakan integrasi antara <strong>Module Water Supply</strong> dan <strong>Module Pick and Place</strong> menjadi sebuah sistem MPS (Modular Production System) yang terpadu. Sistem ini dikontrol menggunakan <strong>PLC Siemens S7-1200</strong> dan antarmuka HMI-nya dapat diakses secara nirkabel melalui Web Browser menggunakan <strong>WebUX WinCC Professional</strong>.</p>
+                    
+                    <!-- FOTO DOKUMENTASI 1: BENTUK FISIK (Ganti link src dengan foto mesin) -->
+                    <figure class="my-8">
+                        <img src="images/water_main.jpg" alt="Fisik Mesin" class="w-full rounded-xl shadow-md border border-slate-200 hover:scale-[1.01] transition-transform">
+                        <figcaption class="text-center text-sm text-slate-500 mt-3">Gambar 1. Fisik penggabungan module MPS Festo (Water Supply & Pick Place).</figcaption>
+                    </figure>
+                   
+                    <!-- FOTO DOKUMENTASI 2: MODULE WATER (Ganti link src dengan foto mesin) -->
+                    <figure class="my-8">
+                        <img src="images/water_module.jpg" alt="Module Water Filling" class="w-full rounded-xl shadow-md border border-slate-200 hover:scale-[1.01] transition-transform">
+                        <figcaption class="text-center text-sm text-slate-500 mt-3">Gambar 2. Ilustrasi dari modul pengisi air.</figcaption>
+                    </figure>
+                    <!-- FOTO DOKUMENTASI 3: MODULE pick and place (Ganti link src dengan foto mesin) -->
+                    <figure class="my-8">
+                        <img src="images/pick_place.jpg" alt="Module Water Filling" class="w-full rounded-xl shadow-md border border-slate-200 hover:scale-[1.01] transition-transform">
+                        <figcaption class="text-center text-sm text-slate-500 mt-3">Gambar 3. Ilustrasi pick and place yang digunakan.</figcaption>
+                    </figure>
+    
+                    <h4 class="font-bold text-2xl text-dark mt-8">Arsitektur Hardware & Pemrograman</h4>
+                    <p>Sistem ini menggunakan 10 Digital Input, 11 Digital Output, dan 1 Analog Input. Pemrograman dikembangkan di <strong>TIA Portal V16</strong> menggunakan <em>Ladder Diagram</em> yang secara terstruktur dibagi menjadi 4 blok utama: Input, Main (Utama), Output, dan Reset. Hal ini memudahkan <em>troubleshooting</em> saat <em>commissioning</em>.</p>
+                    
+                    <ul class="list-disc ml-5 space-y-3 mt-4">
+                        <li><strong>Fungsi Sortir Warna:</strong> Menggunakan sensor diffuse yang dikalibrasi sensitivitasnya untuk membedakan workpiece (warna pink diproses, hitam disortir/dibuang).</li>
+                        <li><strong>Pengolahan Data Analog:</strong> Data sensor tekanan (Pressure Sensor) dikonversi dari <em>integer</em> ke <em>real</em> menggunakan blok instruksi <code>NORM_X</code> dan <code>SCALE_X</code> agar HMI dapat menampilkan angka metrik presisi (0-5.8 Psi).</li>
+                        <li><strong>Logika Sekuensial:</strong> Menggunakan instruksi SET dan Timer (TON) antar blok memori untuk menciptakan <em>State Machine</em> yang aman dan terhindar dari tabrakan mekanis (crash).</li>
+                    </ul>
+    
+                    <!-- FOTO DOKUMENTASI 4: HARDWARE (Ganti link src dengan foto flowchart) -->
+                    <figure class="my-8">
+                        <img src="images/water_device.png" alt="device image" class="w-full rounded-xl shadow-md border border-slate-200 hover:scale-[1.01] transition-transform">
+                        <figcaption class="text-center text-sm text-slate-500 mt-3">Gambar 4. Fisik Kontroller device yang digunakan.</figcaption>
+                    </figure>
+                    <!-- FOTO DOKUMENTASI 5: LOGIC (Ganti link src dengan foto flowchart) -->
+                    <figure class="my-8">
+                        <img src="images/water_logic.jpg" alt="Flowchart" class="w-full rounded-xl shadow-md border border-slate-200 hover:scale-[1.01] transition-transform">
+                        <figcaption class="text-center text-sm text-slate-500 mt-3">Gambar 5. Simple wiring diagram dan Flowchart program.</figcaption>
+                    </figure>
+    
+                    <h4 class="font-bold text-2xl text-dark mt-8">Desain HMI & Integrasi IoT (WebUX)</h4>
+                    <p>Antarmuka visual dirancang menggunakan WinCC Professional. Layar dibagi menjadi dua sistem pengamanan: <strong>Operator Screen</strong> (untuk user memonitor & order takaran air) dan <strong>Maintenance Screen</strong> (berisi fitur <em>InvertBit</em> untuk kontrol aktuator manual oleh teknisi). Melalui konfigurasi IIS (Internet Information Services) dan jaringan TCP/IP lokal, sistem SCADA ini sukses diluncurkan ke Web Browser, memungkinkan <em>remote monitoring</em> secara <em>real-time</em>.</p>
+    
+                    <!-- FOTO DOKUMENTASI 6: TAMPILAN OPERATOR (Ganti link src dengan screenshot layar WebUX) -->
+                    <figure class="my-8">
+                        <img src="images/water_operator.png" alt="operator screen" class="w-full rounded-xl shadow-md border border-slate-200 hover:scale-[1.01] transition-transform">
+                        <figcaption class="text-center text-sm text-slate-500 mt-3">Gambar 6. Tampilan Mode Operator HMI WinCC yang diakses melalui Web Browser.</figcaption>
+                    </figure>
+                     <!-- FOTO DOKUMENTASI 7: TAMPILAN TEKNISI (Ganti link src dengan screenshot layar WebUX) -->
+                    <figure class="my-8">
+                        <img src="images/water_teknisi.png" alt="operator screen" class="w-full rounded-xl shadow-md border border-slate-200 hover:scale-[1.01] transition-transform">
+                        <figcaption class="text-center text-sm text-slate-500 mt-3">Gambar 7. Tampilan Mode Maintanance HMI WinCC yang diakses melalui Web Browser.</figcaption>
+                    </figure>
+                `
+            },
+            bottle: {
+                title: "Automated Bottle Filling & Capping",
+                subtitle: "Purwarupa Pengisian Cairan Presisi Tinggi",
+                img: "https://placehold.co/1200x600/0284c7/ffffff?text=FOTO+MESIN+BOTTLE+FILLING+ANDA+DI+SINI",
+                tags: ["Sistem Otomasi", "Load Cell", "Solenoid Valve", "ESP32", "Microcontroller"],
+                desc: `
+                    <h4 class="font-bold text-2xl text-dark">Konsep Sistem</h4>
+                    <p>Membangun purwarupa mesin pengisian botol yang beroperasi secara sekuensial dan otomatis. Proyek ini membuktikan kemampuan integrasi antara kontrol elektronik presisi dan mekanika fluida.</p>
+                    <h4 class="font-bold text-2xl text-dark mt-8">Arsitektur Hardware & Kontrol</h4>
+                    <ul class="list-disc ml-5 space-y-3">
+                        <li><strong>Pengukuran Berbasis Massa:</strong> Menggunakan <em>Load Cell</em> (sensor berat) untuk memutus aliran cairan secara akurat berdasarkan berat aktual.</li>
+                        <li><strong>Kontrol Debit Aktuator:</strong> Menggunakan <em>Solenoid Valve</em> untuk mengatur aliran secara presisi tanpa buih.</li>
+                        <li><strong>Interlocking Sensor:</strong> Konveyor dihentikan secara presisi menggunakan sensor Proximity.</li>
+                    </ul>
+                `
+            },
+            uav: {
+                title: "Inovasi Mekanik UAV & Gripper",
+                subtitle: "SAFMC 2025 & 2026 Singapore - CAKSA Team",
+                img: "https://placehold.co/1200x600/334155/ffffff?text=FOTO+DRONE+UAV+ANDA+DI+SINI",
+                tags: ["Autodesk Inventor", "3D Printing (DFM)", "Mechanical Assembly", "Weight Optimization"],
+                desc: `
+                    <h4 class="font-bold text-2xl text-dark">Peran R&D</h4>
+                    <p>Terlibat penuh dalam riset mekanik dan fabrikasi <em>drone</em> untuk kompetisi SAFMC di Singapura. Peran difokuskan pada rekayasa kekuatan mekanik untuk menciptakan wahana yang ringan namun tahan benturan.</p>
+                    <h4 class="font-bold text-2xl text-dark mt-8">Inovasi Rekayasa</h4>
+                    <ul class="list-disc ml-5 space-y-3">
+                        <li><strong>Desain Gripper:</strong> Mendesain mekanisme payload gripper otonom menggunakan Autodesk Inventor.</li>
+                        <li><strong>Optimasi Bobot:</strong> Perancangan berbasis DFM untuk komponen cetak 3D.</li>
+                        <li><strong>Pit-Stop Maintenance:</strong> Melakukan perbaikan cepat antar-ronde penerbangan di bawah tekanan kompetisi internasional.</li>
+                    </ul>
+                `
+            }
+        };
+
+        // DATA GALERI PENGALAMAN (Nanti ganti link fotonya dengan URL foto asli Anda)
+        const galleryData = {
+            plc_comp: {
+                title: "Dokumentasi Juara Nasional PLC & HMI",
+                images: [
+                    "https://placehold.co/800x600/059669/ffffff?text=Sertifikat+Juara+2",
+                    "https://placehold.co/800x600/10b981/ffffff?text=Foto+Saat+Lomba",
+                    "https://placehold.co/800x600/047857/ffffff?text=Dokumentasi+Panel+PLC"
+                ]
+            },
+            festo: {
+                title: "Aktivitas Didactic Festo Indonesia",
+                images: [
+                    "https://placehold.co/800x600/1e293b/ffffff?text=Training+Otomasi",
+                    "https://placehold.co/800x600/334155/ffffff?text=Troubleshooting+Kit"
+                ]
+            },
+            safmc: {
+                title: "Dokumentasi SAFMC Singapura (CAKSA Team)",
+                images: [
+                    "https://placehold.co/800x600/ef4444/ffffff?text=Sertifikat+Judge's+Commendation",
+                    "https://placehold.co/800x600/dc2626/ffffff?text=Medali+Perak+(Juara+2)",
+                    "https://placehold.co/800x600/991b1b/ffffff?text=Aksi+Pit+Crew"
+                ]
+            }
+        };
+
+        // Fungsi Membuka Modal Proyek
+        function openProject(id) {
+            const data = projectData[id];
+            
+            // Logika menampilkan Video atau Gambar
+            const imgEl = document.getElementById('pm-img');
+            const videoEl = document.getElementById('pm-video');
+            
+            if (data.video) {
+                // Jika data video ADA
+                videoEl.src = data.video;
+                videoEl.classList.remove('hidden');
+                imgEl.classList.add('hidden');
+                videoEl.play(); // Putar otomatis
+            } else {
+                // Jika data video TIDAK ADA, pakai Foto
+                imgEl.src = data.img;
+                imgEl.classList.remove('hidden');
+                videoEl.classList.add('hidden');
+                videoEl.pause(); 
+                videoEl.src = "";
+            }
+            
+            document.getElementById('pm-title').innerHTML = data.title;
+            document.getElementById('pm-subtitle').querySelector('span').innerHTML = data.subtitle;
+            document.getElementById('pm-desc').innerHTML = data.desc;
+            
+            document.getElementById('pm-tags').innerHTML = data.tags.map(tag => 
+                `<span class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-bold border border-slate-200">${tag}</span>`
+            ).join('');
+
+            const modal = document.getElementById('projectModal');
+            modal.classList.remove('hidden');
+            
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                document.body.style.overflow = 'hidden'; 
+            }, 10);
+        }
+
+        // Fungsi Menutup Modal Proyek
+        function closeProject() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.add('opacity-0');
+            
+            // Matikan video saat modal ditutup agar suaranya tidak bocor ke belakang
+            const videoEl = document.getElementById('pm-video');
+            videoEl.pause();
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        // Fungsi Membuka Modal Galeri
+        function openGallery(id) {
+            const data = galleryData[id];
+            
+            document.getElementById('gm-title').innerHTML = data.title;
+            
+            document.getElementById('gm-grid').innerHTML = data.images.map(imgSrc => 
+                `<div class="overflow-hidden rounded-xl bg-slate-800 flex items-center justify-center border-2 border-slate-700">
+                    <img src="${imgSrc}" class="w-full h-auto max-h-64 object-cover hover:scale-105 transition-transform duration-500 cursor-pointer" alt="Bukti Sertifikat">
+                </div>`
+            ).join('');
+
+            const modal = document.getElementById('galleryModal');
+            modal.classList.remove('hidden');
+            
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                document.body.style.overflow = 'hidden';
+            }, 10);
+        }
+
+        // Fungsi Menutup Modal Galeri
+        function closeGallery() {
+            const modal = document.getElementById('galleryModal');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        // Tutup modal galeri jika mengklik latar belakang hitam
+        document.getElementById('galleryModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeGallery();
+            }
+        });
+        </script>
 </body>
 </html>
