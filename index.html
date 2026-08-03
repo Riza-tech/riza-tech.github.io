@@ -161,7 +161,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Project 1: PLC Sorting System -->
+                <!-- Project 1: PLC Water Project -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
                     <div class="overflow-hidden h-56 relative">
                         <img src="images/water_main.jpg" alt="PLC Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -177,6 +177,7 @@
                             <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-bold">Web Control</span>
                             <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-bold">Ladder Logic</span>
                             <span class="px-4 py-1.5 bg-sky-100 text-sky-800 rounded-lg text-sm font-semibold">Electrical Wiring</span>
+                            <span class="px-4 py-1.5 bg-sky-100 text-sky-800 rounded-lg text-sm font-semibold">Sensor Integration</span>
                         </div>
                         <!-- Tombol Pemicu Modal Detail -->
                         <div class="mt-auto pt-4 border-t border-slate-100">
@@ -187,20 +188,22 @@
                     </div>
                 </div>
 
-                <!-- Project 2: Bottle Filling (New Automation Project) -->
+                <!-- Project 2: PLC Arm -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
                     <div class="overflow-hidden h-56 relative">
-                        <img src="https://placehold.co/600x400/0284c7/ffffff?text=Automated+Bottle+Filling" alt="Bottle Filling System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="images/arm_main.jpg" alt="Bottle Filling System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-8 flex-grow flex flex-col">
-                        <h3 class="text-2xl font-bold text-dark mb-3 leading-tight">Automated Bottle Filling & Capping</h3>
+                        <h3 class="text-2xl font-bold text-dark mb-3 leading-tight">Object Flipper with Pneumatic Arm</h3>
                         <p class="text-slate-600 mb-6 flex-grow">
-                            Pembuatan prototipe sistem pengisian cairan presisi tinggi. Terintegrasi dengan proximity sensor, load cell untuk menimbang volume cairan, dan aktuator solenoid valve.
+                            Pembuatan prototipe untuk membalik dan meindahkan sebuah objek yang memiliki beban berat. Terintegrasi dengan proximity sensor dan sensor warna untuk mengidentifikasi jenis objek, kondisi objek, dan tindakan terhadap objek.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-md text-xs font-bold">Automation</span>
-                            <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-md text-xs font-bold">Sensors</span>
-                            <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-md text-xs font-bold">Actuators</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-bold">PLC</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-bold">HMI Design</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-bold">Ladder Logic</span>
+                            <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-md text-xs font-bold">Sensor Integration</span>
+                            <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-md text-xs font-bold">Electrical Wiring</span>
                         </div>
                         <!-- Tombol Pemicu Modal Detail -->
                         <div class="mt-auto pt-4 border-t border-slate-100">
@@ -223,6 +226,7 @@
                             <i class="text-sm">(Proyek Pelengkap)</i> Pengembangan mekanik UAV dan gripper otonom. Melatih kepekaan integrasi mekanik-elektrik dan hardware troubleshooting.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-bold">PLC</span>
                             <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-bold">Mechanical Design</span>
                             <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-md text-xs font-bold">Hardware Integ.</span>
                         </div>
@@ -357,8 +361,7 @@
         
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
             <!-- INI BAGIAN YANG KURANG: Tag Video -->
-            <video id="pm-video" class="w-full h-64 md:h-[400px] object-cover rounded-2xl shadow-md mb-8 border border-slate-200 hidden" controls loop muted playsinline></video>
-            
+            <video id="pm-video" src="" class="w-full h-auto max-h-[70vh] md:max-h-[500px] object-contain bg-slate-900 rounded-2xl shadow-lg mb-8 border-none hidden" controls></video>
             <img id="pm-img" src="" class="w-full h-64 md:h-[400px] object-cover rounded-2xl shadow-md mb-8 border border-slate-200" alt="Project Detail">
             <h2 id="pm-title" class="text-3xl md:text-5xl font-extrabold text-dark mb-4 tracking-tight"></h2>
             <p id="pm-subtitle" class="text-xl text-primary font-semibold mb-6 flex items-center gap-2">
@@ -457,19 +460,83 @@
                 `
             },
             bottle: {
-                title: "Automated Bottle Filling & Capping",
-                subtitle: "Purwarupa Pengisian Cairan Presisi Tinggi",
-                img: "https://placehold.co/1200x600/0284c7/ffffff?text=FOTO+MESIN+BOTTLE+FILLING+ANDA+DI+SINI",
-                tags: ["Sistem Otomasi", "Load Cell", "Solenoid Valve", "ESP32", "Microcontroller"],
+                title: "Object Flipper with Pneumatic Arm",
+                subtitle: "Purwarupa alat untuk memindahkan dan membalik sebuah beban berat",
+                video: "videos/arm_main.mp4",
+                img: "images/arm_main.jpg",
+                tags: ["PLC S7-1500","Sistem Otomasi", "Color Sensor", "Penuamtic Arm", "HMI Siemens"],
                 desc: `
                     <h4 class="font-bold text-2xl text-dark">Konsep Sistem</h4>
-                    <p>Membangun purwarupa mesin pengisian botol yang beroperasi secara sekuensial dan otomatis. Proyek ini membuktikan kemampuan integrasi antara kontrol elektronik presisi dan mekanika fluida.</p>
-                    <h4 class="font-bold text-2xl text-dark mt-8">Arsitektur Hardware & Kontrol</h4>
+                    <p>Merakit dan memprogram <em>Modular Production System (MPS) Custom Swivel Rotary</em>. Mesin ini bertugas memisahkan benda logam dan non-logam, sekaligus mendeteksi apakah benda tersebut berada dalam posisi normal atau terbalik (invert). Jika terbalik, lengan pneumatik akan otomatis mengambil dan membaliknya.</p>
+                    
+                    <h4 class="font-bold text-2xl text-dark mt-8">Arsitektur & Komponen Utama</h4>
                     <ul class="list-disc ml-5 space-y-3">
-                        <li><strong>Pengukuran Berbasis Massa:</strong> Menggunakan <em>Load Cell</em> (sensor berat) untuk memutus aliran cairan secara akurat berdasarkan berat aktual.</li>
-                        <li><strong>Kontrol Debit Aktuator:</strong> Menggunakan <em>Solenoid Valve</em> untuk mengatur aliran secara presisi tanpa buih.</li>
-                        <li><strong>Interlocking Sensor:</strong> Konveyor dihentikan secara presisi menggunakan sensor Proximity.</li>
-                    </ul>
+                        <li><strong>Kontrol Utama:</strong> Menggunakan PLC Siemens S7-1500 untuk pemrosesan logika sekuensial kecepatan tinggi.</li>
+                        <li><strong>Aktuator Manipulasi:</strong> Menggunakan modul <em>Swivel Rotary</em> dan <em>Gripper</em> pneumatik untuk menjepit, mengangkat, dan memutar <em>workpiece</em> 180 derajat.</li>
+                        <li><strong>Sensor Deteksi:</strong> Menggunakan <em>Retro-reflective sensor</em> (membaca pantulan cahaya) untuk mendeteksi perbedaan ketinggian antara benda normal dan benda terbalik, serta <em>Inductive sensor</em> untuk mendeteksi material logam.</li>
+                        <li><strong>Monitoring:</strong> Antarmuka HMI Siemens TP700 Comfort untuk memantau status sensor, mengontrol konveyor, dan mode <em>maintenance</em> secara <em>real-time</em>.</li>
+                    </ul> 
+                    <!-- FOTO DOKUMENTASI 1: kontrol (Ganti link src dengan foto mesin) -->
+                    <figure class="my-8">
+                        <img src="images/siemens_2.jpg" alt="siemens s71500" class="w-full rounded-xl shadow-md border border-slate-200 hover:scale-[1.01] transition-transform">
+                        <figcaption class="text-center text-sm text-slate-500 mt-3">Gambar 1. kontroller Siemens S7-1500</figcaption>
+                    </figure>  
+
+                    <h4 class="font-bold text-2xl text-dark mt-8">Layout MPS Custom Swivel Rotary</h4>
+                    <!-- FOTO DOKUMENTASI 2: layout (Ganti link src dengan foto mesin) -->
+                    <figure class="my-8">
+                        <img src="images/arm_layout.jpg" alt="Layout Mesin" class="w-full rounded-xl shadow-md border border-slate-200 hover:scale-[1.01] transition-transform">
+                        <figcaption class="text-center text-sm text-slate-500 mt-3">Gambar 2. Layout MPS Custom Swivel Rotary</figcaption>
+                    </figure>  
+                     <ul class="list-disc ml-5 space-y-3">
+                        <li>1)	Multi-pin plug distributor</li>
+                        <li>2)	Swivel Rotary</li>
+                        <li>3)	Gripper</li>
+                        <li>4)	DC Motor Controller</li>
+                        <li>5)	Analog I/O terminal</li>
+                        <li>6)	Digital I/O terminal</li>
+                        <li>7)	Retro-revlective sensor</li>
+                        <li>8)	Conveyor</li>
+                        <li>9)	Stopper</li>
+                        <li>10)	Air Service Unit (ASU)</li>
+                    </ul> 
+
+                    <h4 class="font-bold text-2xl text-dark mt-8">Logika State Machine (4 Kondisi)</h4>
+                    <p>Sistem diprogram menggunakan <em>Ladder Diagram</em> untuk merespon 4 skenario berbeda secara presisi tanpa tabrakan mekanis:</p>
+                    <ol class="list-decimal ml-5 space-y-2 mt-2">
+                        <li><strong>Non-Logam Normal:</strong> Lolos di konveyor 1.</li>
+                        <li><strong>Non-Logam Invert:</strong> Dihentikan <em>stopper</em>, dibalik oleh lengan putar, diloloskan di konveyor 1.</li>
+                        <li><strong>Logam Normal:</strong> Diambil lengan putar, dipindah ke konveyor 2 tanpa dibalik.</li>
+                        <li><strong>Logam Invert:</strong> Diambil lengan putar, dibalik 180 derajat, lalu ditaruh di konveyor 2.</li>
+                    </ol>
+
+                    <div class="my-8 rounded-xl overflow-hidden border border-slate-200">
+                        <img src="images/arm_flowchart.jpg" alt="Flowchart Logika" class="w-full h-auto">
+                    </div>
+                    <h4 class="font-bold text-2xl text-dark mt-8">Desain HMI (4 Windows)</h4>
+                    <!-- FOTO DOKUMENTASI 4: HMI 1 (Ganti link src dengan foto mesin) -->
+                    <figure class="my-8">
+                        <img src="images/hmi1.png" alt="overview screen" class="w-full rounded-xl shadow-md border border-slate-200 hover:scale-[1.01] transition-transform">
+                        <figcaption class="text-center text-sm text-slate-500 mt-3">Gambar 4. Overview Screen</figcaption>
+                    </figure>  
+                    <!-- FOTO DOKUMENTASI 5: HMI 2 (Ganti link src dengan foto mesin) -->
+                    <figure class="my-8">
+                        <img src="images/hmi2.png" alt="visual screen" class="w-full rounded-xl shadow-md border border-slate-200 hover:scale-[1.01] transition-transform">
+                        <figcaption class="text-center text-sm text-slate-500 mt-3">Gambar 5. Visual Screen</figcaption>
+                    </figure>  
+                    <!-- FOTO DOKUMENTASI 6: HMI 3 (Ganti link src dengan foto mesin) -->
+                    <figure class="my-8">
+                        <img src="images/hmi3.png" alt="control screen" class="w-full rounded-xl shadow-md border border-slate-200 hover:scale-[1.01] transition-transform">
+                        <figcaption class="text-center text-sm text-slate-500 mt-3">Gambar 6. Control Screen</figcaption>
+                    </figure>  
+                    <!-- FOTO DOKUMENTASI 7: HMI 4 (Ganti link src dengan foto mesin) -->
+                    <figure class="my-8">
+                        <img src="images/hmi4.png" alt="analog screen" class="w-full rounded-xl shadow-md border border-slate-200 hover:scale-[1.01] transition-transform">
+                        <figcaption class="text-center text-sm text-slate-500 mt-3">Gambar 7. Analog Setting</figcaption>
+                    </figure>  
+
+                    <h4 class="font-bold text-2xl text-dark mt-8">Hasil Pengujian</h4>
+                    <p>Berdasarkan 10 siklus percobaan menggunakan variasi <em>workpiece</em> (merah/silver, normal/terbalik), program <em>state machine</em> berhasil mengeksekusi penyortiran dan pembalikan dengan <strong>tingkat keberhasilan 100%</strong> tanpa <em>error</em> operasional.</p>
                 `
             },
             uav: {
