@@ -214,6 +214,32 @@
                     </div>
                 </div>
 
+                <!-- Project 3: Sorting Expo -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+                    <div class="overflow-hidden h-56 relative">
+                        <img src="images/sortir_main.jpeg" alt="Sorting Expo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-dark mb-3 leading-tight">Sorting Station with Animation for Expo</h3>
+                        <p class="text-slate-600 mb-6 flex-grow">
+                           Pemilahan material cerdas berbasis fusi sensor (Fiber Optik & Induktif). Dioperasikan melalui Web-HMI interaktif yang ditampilkan pada Smart TV layar sentuh dengan animasi <i>real-time</i>.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-bold">PLC</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-bold">HMI Design</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-bold">Ladder Logic</span>
+                            <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-md text-xs font-bold">Sensor Integration</span>
+                            <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-md text-xs font-bold">Electrical Wiring</span>
+                        </div>
+                        <!-- Tombol Pemicu Modal Detail -->
+                        <div class="mt-auto pt-4 border-t border-slate-100">
+                            <button onclick="openProject('sorting')" class="w-full py-3 rounded-lg bg-slate-50 hover:bg-primary hover:text-white text-primary font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer">
+                                Lihat Detail Proyek <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Project 3: SAFMC UAV (Sweetener) -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
                     <div class="overflow-hidden h-56 relative">
@@ -548,6 +574,47 @@
                     <p>Berdasarkan 10 siklus percobaan menggunakan variasi <em>workpiece</em> (merah/silver, normal/terbalik), program <em>state machine</em> berhasil mengeksekusi penyortiran dan pembalikan dengan <strong>tingkat keberhasilan 100%</strong> tanpa <em>error</em> operasional.</p>
                 `
             },
+            sorting: {
+                title: "Smart Sorting Station with Animated Web HMI",
+                subtitle: "Klasifikasi Material Tingkat Lanjut & Visualisasi Smart TV",
+                video: "videos/sortir_video.mp4", 
+                img: "images/sortir_main.jpg",
+                tags: ["Fiber Optic Sensor", "Inductive Sensor", "Web Server", "Smart TV Integration"],
+                desc: `
+                    <h4 class="font-bold text-2xl text-dark">Konsep Klasifikasi Material</h4>
+                    <p>Proyek Sorting Station ini dirancang untuk memisahkan benda ke dalam tiga kategori: <strong>Metal</strong>, <strong>Bright Non-Metal</strong>, dan <strong>Dark Non-Metal</strong>. Pengklasifikasian ini menggunakan teknik penggabungan (fusi) pembacaan sensor Fiber Optik dan sensor Inductive dengan memainkan sensitivitasnya.</p>
+                    
+                    <h4 class="font-bold text-2xl text-dark mt-8">Logika Sensor</h4>
+                    <ul class="list-disc ml-5 space-y-3">
+                        <li><strong>Benda Metal:</strong> Ketika benda logam melintas, maka Sensor Fiber dan Sensor Inductive akan sama-sama mendeteksi.</li>
+                        <li><strong>Bright Non-Metal:</strong> Ketika Sensor Fiber terdeteksi mendeteksi pantulan cahaya, tetapi Sensor Inductive tidak mendeteksi (karena bukan logam).</li>
+                        <li><strong>Dark Non-Metal:</strong> Ketika Sensor Fiber dan Sensor Inductive sama-sama tidak mendeteksi. Hal ini dicapai dengan men-<em>setting</em> sensitivitas sensor fiber optik agar mengabaikan warna gelap.</li>
+                    </ul>
+
+                    <div class="my-8 rounded-xl overflow-hidden border border-slate-200 shadow-sm">
+                        <img src="images/sortir_flowchart.png" alt="Flowchart Logika Sorting" class="w-full h-auto">
+                        <p class="text-sm text-center text-slate-500 p-2 bg-slate-50">Gambar: Flowchart State Machine Klasifikasi</p>
+                    </div>
+
+                    <h4 class="font-bold text-2xl text-dark mt-8">Layout Hardware Sederhana</h4>
+                    <p class="mb-4">Berikut adalah tata letak perangkat keras pada stasiun pemilahan:</p>
+                    <ol class="list-decimal ml-5 space-y-2 font-medium text-slate-700">
+                        <li><strong>Stopper Rod</strong></li>
+                        <li><strong>Stopper Sortir</strong></li>
+                        <li><strong>Sensor Fiber Optik</strong></li>
+                        <li><strong>Sensor Inductive</strong></li>
+                        <li><strong>Sensor Fotoelektrik</strong></li>
+                    </ol>
+
+                    <div class="my-8 rounded-xl overflow-hidden border border-slate-200 shadow-sm">
+                        <img src="images/Sortir_layout.jpg" alt="Layout Hardware Sorting Station" class="w-full h-auto">
+                    </div>
+
+                    <h4 class="font-bold text-2xl text-dark mt-8">Integrasi Web HMI & Smart TV</h4>
+                    <p>Desain HMI untuk pengoperasian alat ini di-hosting di dalam Web Server sehingga dapat dibuka di Web Browser mana pun. Pada pengujiannya, antarmuka ini ditampilkan secara langsung pada sebuah <strong>Smart TV Layar Sentuh</strong>.</p>
+                    <p class="mt-4">Pada tampilan HMI tersebut, terdapat animasi pergerakan <em>workpiece</em> yang sedang diproses secara sinkron dengan kejadian aktual di mesin fisik.</p>
+                `
+            },
             uav: {
                 title: "Inovasi Mekanik UAV & Gripper",
                 subtitle: "SAFMC 2025 & 2026 Singapore - CAKSA Team",
@@ -598,7 +665,7 @@
                     "images/safmc_drone.JPG",
                     "images/safmc_medali.jpeg",
                     "images/safmc_mekanisme.JPG",
-                    "images/safmc_tim1.jpg  ",
+                    "images/safmc_tim1.jpg",
                     "images/safmc_tim2.JPG",
                     "images/safmc_tim3.JPG",
                 ]
