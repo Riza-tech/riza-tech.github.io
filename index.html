@@ -127,6 +127,7 @@
                                 <span class="px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg text-sm font-semibold">Ladder Logic</span>
                                 <span class="px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg text-sm font-semibold">Electro-Pneumatics (Festo)</span>
                                 <span class="px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg text-sm font-semibold">Web Control</span>
+                                <span class="px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg text-sm font-semibold">Simulation</span>
                             </div>
                         </div>
                         <div>
@@ -234,6 +235,29 @@
                         <!-- Tombol Pemicu Modal Detail -->
                         <div class="mt-auto pt-4 border-t border-slate-100">
                             <button onclick="openProject('sorting')" class="w-full py-3 rounded-lg bg-slate-50 hover:bg-primary hover:text-white text-primary font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer">
+                                Lihat Detail Proyek <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Automated Assembly (Factory IO) -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+                    <div class="overflow-hidden h-56 relative">
+                        <img src="images/main_factory.png" alt="Automated Assembly Factory IO" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-dark mb-3 leading-tight">Automated Assembly (Factory IO)</h3>
+                        <p class="text-slate-600 mb-6 flex-grow">
+                            Simulasi <i>Digital Twin</i> mesin perakitan otomatis. Dilengkapi integrasi <i>Vision Sensor</i> dan perancangan arsitektur PLC berstandar industri dengan pemisahan <i>Main Routine</i> (Safety/E-Stop) dan <i>Auto Sequence</i>.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-bold">PLC</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-md text-xs font-bold">Simulation</span>
+                            <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-md text-xs font-bold">Sensor Integration</span>
+                        </div>
+                        <div class="mt-auto pt-4 border-t border-slate-100">
+                            <button onclick="openProject('assembly')" class="w-full py-3 rounded-lg bg-slate-50 hover:bg-primary hover:text-white text-primary font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer">
                                 Lihat Detail Proyek <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
@@ -613,6 +637,33 @@
                     <h4 class="font-bold text-2xl text-dark mt-8">Integrasi Web HMI & Smart TV</h4>
                     <p>Desain HMI untuk pengoperasian alat ini di-hosting di dalam Web Server sehingga dapat dibuka di Web Browser mana pun. Pada pengujiannya, antarmuka ini ditampilkan secara langsung pada sebuah <strong>Smart TV Layar Sentuh</strong>.</p>
                     <p class="mt-4">Pada tampilan HMI tersebut, terdapat animasi pergerakan <em>workpiece</em> yang sedang diproses secara sinkron dengan kejadian aktual di mesin fisik.</p>
+                `
+            },
+            assembly: {
+                title: "Automated Assembly System",
+                subtitle: "Digital Twin & PLC Programming Architecture (Factory IO)",
+                img: "images/main_factory.png",
+                video: "videos/factory_video.mp4",
+                tags: ["Factory IO", "State Machine", "Vision Sensor", "Industrial Safety Logic", "Pick and Place"],
+                desc: `
+                    <h4 class="font-bold text-2xl text-dark">Konsep Sistem & Proses Assembly</h4>
+                    <p>Merancang simulasi sistem perakitan otomatis (*Pick and Place*) yang menyeleksi dan menggabungkan komponen <i>base</i> dan <i>lid</i> (tutup). Sistem memanfaatkan dua jalur konveyor paralel dan <b>Vision Sensor</b> untuk memastikan warna tutup sesuai dengan <i>base</i>. Jika warna tidak cocok, sistem akan me-<i>reject</i> tutup tersebut dan memanggil part baru secara otomatis hingga kondisi terpenuhi.</p>
+                    
+                    <h4 class="font-bold text-2xl text-dark mt-8">Arsitektur Master Control & Safety (Main Routine)</h4>
+                    <img src="images/factory_flow1.png" class="w-full rounded-xl my-4 border border-slate-200" alt="Main Routine Flowchart">
+                    <p>Pendekatan pemrograman PLC dilakukan dengan standar industri profesional. Logika sistem dibagi menjadi dua tingkat:</p>
+                    <ul class="list-disc ml-5 space-y-3">
+                        <li><b>Safety First:</b> Blok <i>Emergency Stop</i> diletakkan pada hierarki tertinggi (Main Routine). Jika ditekan, mesin langsung melakukan <i>Hard Stop / Freeze</i> pada seluruh aktuator secara seketika dan menyalakan alarm.</li>
+                        <li><b>Mode Selection & Interlock:</b> Dilengkapi <i>Selector Switch</i> untuk pergantian mode (Auto/Manual). Terdapat sistem <i>interlock</i> yang mencegah operator mereset <i>counter</i> produksi jika mesin tidak dalam kondisi benar-benar berhenti (STOP state).</li>
+                    </ul>
+                    <img src="images/factory_panel.png" class="w-full md:w-2/3 mx-auto rounded-xl my-4 border border-slate-200" alt="Control Panel">
+
+                    <h4 class="font-bold text-2xl text-dark mt-8">Sekuens Otomatis & Lengan Robot (Auto Sequence)</h4>
+                    <img src="images/Factory_flow2.png" class="w-full md:w-3/4 mx-auto rounded-xl my-4 border border-slate-200" alt="Auto Sequence Flowchart">
+                    <p>Sub-rutin otomatisasi dirancang menggunakan logika <i>Sequential Function Chart / State Machine</i>. Ketika kondisi perakitan terpenuhi (warna cocok dan sensor batas mendeteksi barang), sistem aktuator <i>Clamp</i> akan mengunci part.</p>
+                    <img src="images/factory_arm.png" class="w-full md:w-2/3 mx-auto rounded-xl my-4 border border-slate-200" alt="Arm Assembly">
+                    <img src="images/factory_con.png" class="w-full md:w-2/3 mx-auto rounded-xl my-4 border border-slate-200" alt="Conveyor Assembly">
+                    <p>Lengan robot silinder 2-Axis (<i>Move X</i> dan <i>Move Z</i>) turun untuk menghisap tutup menggunakan aktuator vakum (<i>Grab</i>), lalu mengangkat dan memindahkannya ke atas <i>base</i> dengan presisi tinggi. Proses ini diakhiri dengan menghitung jumlah produk sukses menggunakan sensor <i>Photoelectric</i> (Part Leaving) sebelum siklus diulang kembali.</p>
                 `
             },
             uav: {
