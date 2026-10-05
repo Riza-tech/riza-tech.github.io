@@ -263,6 +263,28 @@
                         </div>
                     </div>
                 </div>
+                <!-- Project 5: HMI Design Gallery -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+                    <div class="overflow-hidden h-56 relative">
+                        <img src="images/mainhmi.png" alt="HMI Design Gallery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-dark mb-3 leading-tight">Industrial HMI Design Gallery</h3>
+                        <p class="text-slate-600 mb-6 flex-grow">
+                            Kumpulan desain <i>Human-Machine Interface</i> (HMI) untuk berbagai sistem otomasi industri, termasuk kontrol suhu, <i>Material Transfer</i>, <i>Depalletizer</i>, hingga <i>Smart Sorting</i>.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-md text-xs font-bold">HMI Design</span>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-md text-xs font-bold">SCADA</span>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-md text-xs font-bold">GUI</span>
+                        </div>
+                        <div class="mt-auto pt-4 border-t border-slate-100">
+                            <button onclick="openProject('hmi_gallery')" class="w-full py-3 rounded-lg bg-slate-50 hover:bg-primary hover:text-white text-primary font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer">
+                                Lihat Detail Galeri <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Project 3: SAFMC UAV (Sweetener) -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
@@ -659,11 +681,69 @@
                     <img src="images/factory_panel.png" class="w-full md:w-2/3 mx-auto rounded-xl my-4 border border-slate-200" alt="Control Panel">
 
                     <h4 class="font-bold text-2xl text-dark mt-8">Sekuens Otomatis & Lengan Robot (Auto Sequence)</h4>
-                    <img src="images/factory_flow2.png" class="w-full md:w-3/4 mx-auto rounded-xl my-4 border border-slate-200" alt="Auto Sequence Flowchart">
+                    <img src="images/Factory_flow2.png" class="w-full md:w-3/4 mx-auto rounded-xl my-4 border border-slate-200" alt="Auto Sequence Flowchart">
                     <p>Sub-rutin otomatisasi dirancang menggunakan logika <i>Sequential Function Chart / State Machine</i>. Ketika kondisi perakitan terpenuhi (warna cocok dan sensor batas mendeteksi barang), sistem aktuator <i>Clamp</i> akan mengunci part.</p>
                     <img src="images/factory_arm.png" class="w-full md:w-2/3 mx-auto rounded-xl my-4 border border-slate-200" alt="Arm Assembly">
                     <img src="images/factory_con.png" class="w-full md:w-2/3 mx-auto rounded-xl my-4 border border-slate-200" alt="Conveyor Assembly">
                     <p>Lengan robot silinder 2-Axis (<i>Move X</i> dan <i>Move Z</i>) turun untuk menghisap tutup menggunakan aktuator vakum (<i>Grab</i>), lalu mengangkat dan memindahkannya ke atas <i>base</i> dengan presisi tinggi. Proses ini diakhiri dengan menghitung jumlah produk sukses menggunakan sensor <i>Photoelectric</i> (Part Leaving) sebelum siklus diulang kembali.</p>
+                `
+            },
+            hmi_gallery: {
+                title: "Industrial HMI Design Gallery",
+                subtitle: "Human-Machine Interface (GUI) untuk Sistem Otomasi & Kontrol Proses",
+                img: "images/hmi5.png",
+                tags: ["HMI Design", "Process Control", "Factory Automation", "SCADA", "PLC Interface"],
+                desc: `
+                    <h4 class="font-bold text-2xl text-dark mb-4">Pengembangan Antarmuka Industri</h4>
+                    <p class="mb-6">Sebagai jembatan antara logika PLC yang kompleks dan operator manusia, desain HMI yang intuitif sangatlah krusial. Galeri ini menampilkan berbagai desain antarmuka yang pernah saya kembangkan untuk kompetisi nasional (seperti E-TIME dan ATMICUP) maupun simulasi sistem industri skala besar. Desain difokuskan pada kejelasan visual, kemudahan navigasi, dan <i>monitoring</i> status aktuator secara <i>real-time</i>.</p>
+                    
+                    <h4 class="font-bold text-xl text-dark mb-4 border-b pb-2">1. Process Automation & Fluid Control</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <img src="images/mainhmi.png" class="w-full h-48 object-cover rounded-lg border border-slate-200 hover:scale-105 transition duration-300" alt="Material Transfer System">
+                            <p class="text-sm text-center mt-2 font-semibold text-slate-600">Silo Material Transfer System</p>
+                        </div>
+                        <div>
+                            <img src="images/hmi7.png" class="w-full h-48 object-cover rounded-lg border border-slate-200 hover:scale-105 transition duration-300" alt="Tank Filling System">
+                            <p class="text-sm text-center mt-2 font-semibold text-slate-600">Fluid Tank Mixing & Filling</p>
+                        </div>
+                        <div>
+                            <img src="images/hmi2.png" class="w-full h-48 object-cover rounded-lg border border-slate-200 hover:scale-105 transition duration-300" alt="AHU Control Room">
+                            <p class="text-sm text-center mt-2 font-semibold text-slate-600">AHU System Control Room</p>
+                        </div>
+                        <div>
+                            <img src="images/hmi1.png" class="w-full h-48 object-cover rounded-lg border border-slate-200 hover:scale-105 transition duration-300" alt="Temperature Set Point">
+                            <p class="text-sm text-center mt-2 font-semibold text-slate-600">Temperature & PID Control Panel</p>
+                        </div>
+                         <div>
+                            <img src="images/hmi9.png" class="w-full h-48 object-cover rounded-lg border border-slate-200 hover:scale-105 transition duration-300" alt="Temperature Set Point">
+                            <p class="text-sm text-center mt-2 font-semibold text-slate-600">Waste Tank Management</p>
+                        </div>
+                         <div>
+                            <img src="images/hmi10.png" class="w-full h-48 object-cover rounded-lg border border-slate-200 hover:scale-105 transition duration-300" alt="Temperature Set Point">
+                            <p class="text-sm text-center mt-2 font-semibold text-slate-600">Noodles Mass Production</p>
+                        </div>
+                    </div>
+
+                    <h4 class="font-bold text-xl text-dark mb-4 border-b pb-2">2. Factory Automation & Material Handling</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <img src="images/hmi4.png" class="w-full h-48 object-cover rounded-lg border border-slate-200 hover:scale-105 transition duration-300" alt="Depalletizer System">
+                            <p class="text-sm text-center mt-2 font-semibold text-slate-600">Robotic Depalletizer & AGV</p>
+                        </div>
+                        <div>
+                            <img src="images/hmi8.png" class="w-full h-48 object-cover rounded-lg border border-slate-200 hover:scale-105 transition duration-300" alt="Sorting NG System">
+                            <p class="text-sm text-center mt-2 font-semibold text-slate-600">Quality Control & NG Sorting</p>
+                        </div>
+                        <div>
+                            <img src="images/hmi3.png" class="w-full h-48 object-cover rounded-lg border border-slate-200 hover:scale-105 transition duration-300" alt="Pick and Place Area">
+                            <p class="text-sm text-center mt-2 font-semibold text-slate-600">Pick and Place Robot Monitoring</p>
+                        </div>
+                        <div>
+                            <img src="images/hmi6.png" class="w-full h-48 object-contain bg-slate-100 rounded-lg border border-slate-200 hover:scale-105 transition duration-300" alt="Top Down Transfer">
+                            <p class="text-sm text-center mt-2 font-semibold text-slate-600">Top-Down Conveyor Transfer</p>
+                        </div>
+                    </div>
                 `
             },
             uav: {
